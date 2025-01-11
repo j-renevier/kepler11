@@ -1,0 +1,42 @@
+config:
+  app:
+    name: Dashboard
+    locale: fr
+    theme: default
+    header:
+      title: Tableau de bord central
+      subtitle: Gérez tous vos services ici
+  services:
+    - name: Authentik
+      url: http://localhost:9000
+      icon: mdi:account-lock-outline
+    - name: Gotify
+      url: http://localhost:8080
+      icon: mdi:bell-alert
+    - name: Grafana
+      url: http://localhost:3001
+      icon: mdi:chart-line
+    - name: Jellyfin
+      url: http://localhost:8096
+      icon: mdi:jellyfish-outline
+    - name: Portainer
+      url: http://localhost:9001
+      icon: mdi:docker
+    - name: Proxmox
+      url: https://localhost:8006
+      icon: mdi:server
+    - name: Prometheus
+      url: http://localhost:9090
+      icon: mdi:chart-bar
+    - name: TrueNAS
+      url: http://localhost:80
+      icon: mdi:nas
+    - name: Zabbix
+      url: http://localhost:10051
+      icon: mdi:monitor
+  widgets:
+    - type: clock
+    - type: weather
+      properties:
+        location: Paris
+        api_key: VOTRE_CLÉ_API_WEATHER

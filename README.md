@@ -1,5 +1,7 @@
 # Kepler11 
 
+NE PAS METTRE DE SECRET DANS .ENV
+
 ## Ajouter l'utilisateur au group sudo 
 
 ```sh 
