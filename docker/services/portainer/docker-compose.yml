@@ -1,0 +1,14 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: always
+    ports:
+      - "9000:9000" # Port pour l'interface web
+      - "8000:8000" # Port pour l'agent (facultatif, utilisé pour la gestion des environnements distants)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Accès au socket Docker
+      - portainer_data:/data # Volume pour stocker les données de Portainer
+
+volumes:
+  portainer_data:

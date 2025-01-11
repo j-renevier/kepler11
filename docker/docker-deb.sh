@@ -26,7 +26,10 @@ echo "==> Mise à jour des dépôts et installation de Docker Engine..."
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-echo "==> Vérification de l'installation de Docker avec l'image hello-world..."
+echo "==> Vérification de l'installation de Docker avec docker -v..."
+docker -v
+
+echo "==> Test de Docker avec l'image hello-world..."
 sudo docker run hello-world
 
 echo "==> Configuration pour exécuter Docker sans sudo (facultatif)..."
@@ -36,4 +39,10 @@ if ! groups | grep -q docker; then
     echo "Déconnectez-vous et reconnectez-vous pour appliquer les changements."
 fi
 
-echo "==> Docker a été installé avec succès!"
+echo "==> Vérification des droits utilisateur pour exécuter Docker sans sudo..."
+newgrp docker <<EOF
+docker -v
+docker run hello-world
+EOF
+
+echo "==> Docker a été installé et configuré avec succès !"
