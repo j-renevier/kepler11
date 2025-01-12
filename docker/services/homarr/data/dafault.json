@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "configProperties": {
+    "name": "MonDashboard"
+  },
+  "categories": [
+    {
+      "id": "monitoring",
+      "name": "Monitoring",
+      "position": 0
+    },
+    {
+      "id": "media",
+      "name": "Médias",
+      "position": 1
+    },
+    {
+      "id": "security",
+      "name": "Sécurité",
+      "position": 2
+    }
+  ],
+  "wrappers": [
+    {
+      "id": "default",
+      "position": 0
+    }
+  ],
+  "apps": [
+    {
+      "id": "authentik-app",
+      "name": "Authentik",
+      "url": "https://authentik.votre-domaine.com",
+      "behaviour": {
+        "onClickUrl": "https://authentik.votre-domaine.com",
+        "externalUrl": "https://authentik.votre-domaine.com",
+        "isOpeningNewTab": true
+      },
+      "network": {
+        "enabledStatusCheck": true,
+        "statusCheckInterval": 300
+      },
+      "appearance": {
+        "categoryId": "security",
+        "iconUrl": "/icons/authentik.png"
+      },
+      "integration": {
+        "type": "authentik",
+        "properties": {
+          "token": "votre-token"
+        }
+      }
+    },
+    {
+      "id": "grafana-app",
+      "name": "Grafana",
+      "url": "https://grafana.votre-domaine.com",
+      "behaviour": {
+        "onClickUrl": "https://grafana.votre-domaine.com",
+        "externalUrl": "https://grafana.votre-domaine.com",
+        "isOpeningNewTab": true
+      },
+      "network": {
+        "enabledStatusCheck": true,
+        "statusCheckInterval": 300
+      },
+      "appearance": {
+        "categoryId": "monitoring",
+        "iconUrl": "/icons/grafana.png"
+      }
+    },
+    {
+      "id": "homeassistant-app",
+      "name": "Home Assistant",
+      "url": "https://hass.votre-domaine.com",
+      "behaviour": {
+        "onClickUrl": "https://hass.votre-domaine.com",
+        "externalUrl": "https://hass.votre-domaine.com",
+        "isOpeningNewTab": true
+      },
+      "network": {
+        "enabledStatusCheck": true,
+        "statusCheckInterval": 300
+      },
+      "appearance": {
+        "categoryId": "monitoring",
+        "iconUrl": "/icons/home-assistant.png"
+      },
+      "integration": {
+        "type": "homeassistant",
+        "properties": {
+          "token": "votre-token"
+        }
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "id": "docker-widget",
+      "type": "docker",
+      "properties": {
+        "enabledContainerUpdate": true,
+        "enabledContainerStats": true,
+        "containerFilterType": "all"
+      }
+    },
+    {
+      "id": "calendar-widget",
+      "type": "calendar"
+    },
+    {
+      "id": "search-widget",
+      "type": "search",
+      "properties": {
+        "searchEnabled": true,
+        "searchProvider": "google"
+      }
+    }
+  ]
+}
