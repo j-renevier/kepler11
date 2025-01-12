@@ -9,7 +9,7 @@ services:
       - LOG_LEVEL=${LOG_LEVEL:-info}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./icons:/app/public/icons
+      - ./configs:/app/data/configs
       - ./imgs:/app/public/imgs
       - ./data:/data
     networks:
