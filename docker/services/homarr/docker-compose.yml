@@ -1,27 +1,22 @@
 services:
   homarr:
-    container_name: ${HOSTNAME:-homarr}
-    image: ghcr.io/ajnart/homarr:latest
+    image: ajnart/homarr:latest
+    container_name: homarr
     restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./configs:/app/data/configs
-      - ./icons:/app/public/icons
-      - ./data:/data
-    environment:
-      - TZ=${TZ:-Europe/Paris}
-      - PASSWORD=${HOMARR_PASSWORD}
-      - BASE_URL=${BASE_URL:-http://localhost:7575}
-      - DISABLE_ANALYTICS=${DISABLE_ANALYTICS:-true}
-      - LOG_LEVEL=${LOG_LEVEL:-info}
-      - HOSTNAME=${HOSTNAME:-homarr}
-      - DOMAIN=${DOMAIN}
     ports:
-      - "${PORT:-7575}:7575"
+      - "${HOMARR_PORT}:7575"
+    environment: 
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - HOSTNAME=${HOMARR_HOSTNAME:-homarr}
+      - DOMAIN=${HOMARR_DOMAIN:-doamaine.com}
+    volumes:
+      - ./homarr/configs:/app/data/configs
+      - ./homarr/icons:/app/public/icons
+      - ./homarr/data:/data
     networks:
       - homarr-net
 
 networks:
   homarr-net:
-    name: ${NETWORK_NAME:-homarr-net}
+    name: ${HOMARR_NETWORK_NAME:-homarr-net}
     driver: bridge
