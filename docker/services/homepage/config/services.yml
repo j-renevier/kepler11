@@ -1,0 +1,100 @@
+- My Services:
+    - Authentik:
+        icon: authentik.png
+        href: "http://authentik.local"
+        description: Identity and Access Management
+
+    - Calendar:
+        icon: calendar.png
+        href: "http://calendar.local"
+        description: Your Calendar
+
+    - Cloudflared:
+        icon: cloudflared.png
+        href: "http://cloudflared.local"
+        description: Secure Tunnels
+
+    - CrowdSec:
+        icon: crowdsec.png
+        href: "http://crowdsec.local"
+        description: Security Analytics
+
+    - Custom API:
+        icon: custom-api.png
+        href: "http://api.local"
+        description: Your Custom API
+
+    - Gitlab:
+        icon: gitlab.png
+        href: "http://gitlab.local"
+        description: Code Repository
+
+    - Gotify:
+        icon: gotify.png
+        href: "http://gotify.local"
+        description: Notification Service
+
+    - Grafana:
+        icon: grafana.png
+        href: "http://grafana.local"
+        description: Monitoring Dashboard
+
+    - Home Assistant:
+        icon: home-assistant.png
+        href: "http://homeassistant.local"
+        description: Home Automation
+
+    - Jellyfin:
+        icon: jellyfin.png
+        href: "http://jellyfin.local"
+        description: Media Server
+
+    - OPNsense:
+        icon: opnsense.png
+        href: "http://opnsense.local"
+        description: Firewall & Security
+
+    - Pi-hole:
+        icon: pi-hole.png
+        href: "http://pihole.local"
+        description: DNS Ad Blocker
+
+    - Portainer:
+        icon: portainer.png
+        href: "http://portainer.local"
+        description: Docker Management
+
+    - Prometheus:
+        icon: prometheus.png
+        href: "http://prometheus.local"
+        description: Monitoring System
+
+    - Prometheus Metric:
+        icon: prometheus-metric.png
+        href: "http://prometheus-metric.local"
+        description: Metrics Collection
+
+    - Proxmox:
+        icon: proxmox.png
+        href: "http://proxmox.local"
+        description: Virtualization Management
+
+    - Traefik:
+        icon: traefik.png
+        href: "http://traefik.local"
+        description: Reverse Proxy
+
+    - TrueNAS:
+        icon: truenas.png
+        href: "http://truenas.local"
+        description: Storage Management
+
+    - Zabbix:
+        icon: zabbix.png
+        href: "http://zabbix.local"
+        description: Monitoring Tool
+
+    - WhatsUpDocker:
+        icon: whatsupdocker.png
+        href: "http://whatsupdocker.local"
+        description: Docker Monitoring
