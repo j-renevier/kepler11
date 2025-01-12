@@ -17,8 +17,8 @@ services:
     ports:
       - "${PORT}:7575"
     networks:
-      - proxy
+      - homarr_net
 
 networks:
-  proxy:
-    external: true
+  homarr_net:
+    driver: bridge
