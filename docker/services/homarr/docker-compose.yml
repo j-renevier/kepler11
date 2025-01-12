@@ -1,6 +1,6 @@
 services:
   homarr:
-    image: ajnart/homarr:latest
+    image: ghcr.io/ajnart/homarr:latest
     container_name: homarr
     restart: unless-stopped
     ports:
