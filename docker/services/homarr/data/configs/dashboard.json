@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "configProperties": {
+    "name": "custom_dashboard"
+  },
+  "categories": [],
+  "wrappers": [
+    {
+      "id": "custom_wrapper",
+      "position": 0
+    }
+  ],
+  "apps": [
+    {
+      "id": "authentik",
+      "name": "Authentik",
+      "url": "https://authentik.local",
+      "behaviour": {
+        "onClickUrl": "https://authentik.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/authentik.png"
+      }
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "url": "https://calendar.local",
+      "behaviour": {
+        "onClickUrl": "https://calendar.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/calendar.png"
+      }
+    },
+    {
+      "id": "cloudflared",
+      "name": "Cloudflared",
+      "url": "https://cloudflared.local",
+      "behaviour": {
+        "onClickUrl": "https://cloudflared.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/cloudflare.png"
+      }
+    },
+    {
+      "id": "crowdsec",
+      "name": "CrowdSec",
+      "url": "https://crowdsec.local",
+      "behaviour": {
+        "onClickUrl": "https://crowdsec.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/security.png"
+      }
+    },
+    {
+      "id": "custom_api",
+      "name": "Custom API",
+      "url": "https://api.local",
+      "behaviour": {
+        "onClickUrl": "https://api.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/api.png"
+      }
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "url": "https://gitlab.local",
+      "behaviour": {
+        "onClickUrl": "https://gitlab.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/gitlab.png"
+      }
+    },
+    {
+      "id": "gotify",
+      "name": "Gotify",
+      "url": "https://gotify.local",
+      "behaviour": {
+        "onClickUrl": "https://gotify.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/notification.png"
+      }
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "url": "https://grafana.local",
+      "behaviour": {
+        "onClickUrl": "https://grafana.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/grafana.png"
+      }
+    },
+    {
+      "id": "home_assistant",
+      "name": "Home Assistant",
+      "url": "https://homeassistant.local",
+      "behaviour": {
+        "onClickUrl": "https://homeassistant.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/home-assistant.png"
+      }
+    },
+    {
+      "id": "jellyfin",
+      "name": "Jellyfin",
+      "url": "https://jellyfin.local",
+      "behaviour": {
+        "onClickUrl": "https://jellyfin.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/jellyfin.png"
+      }
+    },
+    {
+      "id": "opnsense",
+      "name": "OPNsense",
+      "url": "https://opnsense.local",
+      "behaviour": {
+        "onClickUrl": "https://opnsense.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/router.png"
+      }
+    },
+    {
+      "id": "pihole",
+      "name": "Pi-hole",
+      "url": "https://pihole.local",
+      "behaviour": {
+        "onClickUrl": "https://pihole.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/pihole.png"
+      }
+    },
+    {
+      "id": "portainer",
+      "name": "Portainer",
+      "url": "https://portainer.local",
+      "behaviour": {
+        "onClickUrl": "https://portainer.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/portainer.png"
+      }
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "url": "https://prometheus.local",
+      "behaviour": {
+        "onClickUrl": "https://prometheus.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/prometheus.png"
+      }
+    },
+    {
+      "id": "proxmox",
+      "name": "Proxmox",
+      "url": "https://proxmox.local",
+      "behaviour": {
+        "onClickUrl": "https://proxmox.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/proxmox.png"
+      }
+    },
+    {
+      "id": "traefik",
+      "name": "Traefik",
+      "url": "https://traefik.local",
+      "behaviour": {
+        "onClickUrl": "https://traefik.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/traefik.png"
+      }
+    },
+    {
+      "id": "truenas",
+      "name": "TrueNAS",
+      "url": "https://truenas.local",
+      "behaviour": {
+        "onClickUrl": "https://truenas.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/truenas.png"
+      }
+    },
+    {
+      "id": "zabbix",
+      "name": "Zabbix",
+      "url": "https://zabbix.local",
+      "behaviour": {
+        "onClickUrl": "https://zabbix.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/zabbix.png"
+      }
+    },
+    {
+      "id": "whatsupdocker",
+      "name": "WhatsUpDocker",
+      "url": "https://whatsupdocker.local",
+      "behaviour": {
+        "onClickUrl": "https://whatsupdocker.local",
+        "isOpeningNewTab": true
+      },
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons@master/png/docker.png"
+      }
+    }
+  ],
+  "settings": {
+    "customization": {
+      "pageTitle": "Custom Dashboard",
+      "backgroundImageUrl": "",
+      "colors": {
+        "primary": "blue",
+        "secondary": "gray"
+      }
+    }
+  }
+}

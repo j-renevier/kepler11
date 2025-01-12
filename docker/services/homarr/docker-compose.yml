@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./configs:/app/data/configs
-      - ./icons:/app/public/icons
+      - ./icons:/app/public/imgs/icons
       - ./data:/data
     environment:
       - TZ=${TZ}
