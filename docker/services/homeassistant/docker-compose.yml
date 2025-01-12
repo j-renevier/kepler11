@@ -25,6 +25,18 @@ services:
       - ./data/db:/var/lib/postgresql/data
     networks:
       - home-assistant
+      
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - ./esphome:/config
+    ports:
+      - "6052:6052"
+    restart: unless-stopped
+    networks:
+      - home-assistant
+
 
 networks:
   home-assistant:
