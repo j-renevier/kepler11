@@ -1,0 +1,161 @@
+{
+  "version": 2,
+  "name": "Mon Dashboard",
+  "theme": {
+    "mode": "dark",
+    "color": "blue",
+    "style": "modern",
+    "useSystemTheme": true
+  },
+  "pages": [{
+    "name": "Dashboard Principal",
+    "icon": "dashboard",
+    "widgets": [
+      {
+        "type": "calendar",
+        "properties": {
+          "name": "Calendrier",
+          "schedule": "daily",
+          "position": {"x": 0, "y": 0, "w": 4, "h": 4}
+        }
+      },
+      {
+        "type": "docker",
+        "properties": {
+          "name": "État des Conteneurs",
+          "showSystemContainers": false,
+          "position": {"x": 4, "y": 0, "w": 4, "h": 4}
+        }
+      },
+      {
+        "type": "search",
+        "properties": {
+          "name": "Recherche Universelle",
+          "engines": ["google", "github", "dockerhub"],
+          "position": {"x": 0, "y": 4, "w": 8, "h": 1}
+        }
+      },
+      {
+        "type": "monitoring",
+        "properties": {
+          "name": "Surveillance Système",
+          "metrics": ["cpu", "memory", "disk", "network"],
+          "position": {"x": 8, "y": 0, "w": 4, "h": 4}
+        }
+      }
+    ],
+    "apps": [
+      {
+        "name": "Authentik",
+        "icon": "/icons/authentik.png",
+        "url": "${AUTHENTIK_URL}",
+        "behavior": {
+          "isAuthenticationRequired": true,
+          "externalUrl": "${AUTHENTIK_EXTERNAL_URL}",
+          "timeout": 5000
+        },
+        "integration": {
+          "type": "authentik",
+          "properties": {
+            "url": "${AUTHENTIK_URL}",
+            "token": "${AUTHENTIK_TOKEN}"
+          }
+        },
+        "network": {
+          "enableHealthCheck": true,
+          "healthCheckInterval": 60
+        },
+        "appearance": {
+          "shape": "square",
+          "size": "medium",
+          "showStatus": true
+        }
+      },
+      {
+        "name": "Grafana",
+        "icon": "/icons/grafana.png",
+        "url": "${GRAFANA_URL}",
+        "integration": {
+          "type": "grafana",
+          "properties": {
+            "url": "${GRAFANA_URL}",
+            "token": "${GRAFANA_TOKEN}",
+            "dashboards": ["home", "system", "docker"],
+            "refreshInterval": 30
+          }
+        }
+      },
+      {
+        "name": "Home Assistant",
+        "icon": "/icons/home-assistant.png",
+        "url": "${HASS_URL}",
+        "integration": {
+          "type": "homeassistant",
+          "properties": {
+            "url": "${HASS_URL}",
+            "token": "${HASS_TOKEN}",
+            "widgets": [
+              {
+                "type": "climate",
+                "entities": ["climate.salon", "climate.chambre"]
+              },
+              {
+                "type": "lights",
+                "entities": ["light.salon", "light.cuisine"]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proxmox",
+        "icon": "/icons/proxmox.png",
+        "url": "${PROXMOX_URL}",
+        "integration": {
+          "type": "proxmox",
+          "properties": {
+            "url": "${PROXMOX_URL}",
+            "token": "${PROXMOX_TOKEN}",
+            "node": "pve",
+            "showVMs": true,
+            "showContainers": true,
+            "showStorage": true
+          }
+        }
+      }
+    ]
+  }],
+  "settings": {
+    "language": "fr",
+    "timezone": "Europe/Paris",
+    "dateFormat": "DD/MM/YYYY",
+    "timeFormat": "24",
+    "notifications": {
+      "enabled": true,
+      "position": "top-right",
+      "duration": 5000
+    },
+    "dashboard": {
+      "enableGridSnap": true,
+      "gridSize": 20,
+      "allowWidgetOverlap": false,
+      "defaultLayout": "auto"
+    },
+    "security": {
+      "enableAuth": true,
+      "sessionTimeout": 3600,
+      "allowGuests": false
+    },
+    "integrations": {
+      "docker": {
+        "enabled": true,
+        "socket": "/var/run/docker.sock"
+      },
+      "prometheus": {
+        "enabled": true,
+        "url": "${PROMETHEUS_URL}",
+        "scrapeInterval": 15
+      }
+    }
+  }
+}

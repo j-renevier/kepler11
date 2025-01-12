@@ -1,0 +1,31 @@
+services:
+  homarr:
+    container_name: ${HOSTNAME:-homarr}
+    image: ghcr.io/ajnart/homarr:latest
+    restart: unless-stopped
+    volumes:
+      - ${CONFIG_PATH:-./configs}:/app/data/configs
+      - ${ICONS_PATH:-./icons}:/app/public/icons
+      - ${DATA_PATH:-./data}:/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - TZ=${TZ:-Europe/Paris}
+      - PASSWORD=${HOMARR_PASSWORD}
+      - BASE_URL=${BASE_URL:-http://localhost:7575}
+      - DISABLE_ANALYTICS=${DISABLE_ANALYTICS:-true}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - HOSTNAME=${HOSTNAME:-homarr}
+      - DOMAIN=${DOMAIN}
+    ports:
+      - "${PORT:-7575}:7575"
+    networks:
+      - homarr-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${HOSTNAME:-homarr}.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.services.${HOSTNAME:-homarr}.loadbalancer.server.port=${PORT:-7575}"
+
+networks:
+  homarr-net:
+    name: ${NETWORK_NAME:-homarr-net}
+    driver: bridge
