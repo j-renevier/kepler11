@@ -1,0 +1,28 @@
+{
+  "general": {
+    "title": "Homarr Dashboard",
+    "subtitle": "Accédez rapidement à vos services",
+    "baseURL": "http://your-homarr-url.com"
+  },
+  "widgets": [
+    { "type": "link", "title": "Authentik", "url": "${AUTHENTIK_URL}", "icon": "key" },
+    { "type": "link", "title": "Calendar", "url": "${CALENDAR_URL}", "icon": "calendar" },
+    { "type": "link", "title": "Cloudflared", "url": "${CLOUDFLARED_URL}", "icon": "cloud" },
+    { "type": "link", "title": "CrowdSec", "url": "${CROWDSEC_URL}", "icon": "shield" },
+    { "type": "link", "title": "Custom API", "url": "${CUSTOM_API_URL}", "icon": "api" },
+    { "type": "link", "title": "GitLab", "url": "${GITLAB_URL}", "icon": "git" },
+    { "type": "link", "title": "Gotify", "url": "${GOTIFY_URL}", "icon": "bell" },
+    { "type": "chart", "title": "Grafana", "url": "${GRAFANA_URL}", "icon": "chart-bar" },
+    { "type": "link", "title": "Home Assistant", "url": "${HOME_ASSISTANT_URL}", "icon": "home" },
+    { "type": "link", "title": "Jellyfin", "url": "${JELLYFIN_URL}", "icon": "film" },
+    { "type": "link", "title": "OPNsense", "url": "${OPNSENSE_URL}", "icon": "network" },
+    { "type": "link", "title": "Pi-hole", "url": "${PIHOLE_URL}", "icon": "dns" },
+    { "type": "link", "title": "Portainer", "url": "${PORTAINER_URL}", "icon": "docker" },
+    { "type": "chart", "title": "Prometheus Metrics", "url": "${PROMETHEUS_URL}", "icon": "metrics" },
+    { "type": "link", "title": "Proxmox", "url": "${PROXMOX_URL}", "icon": "server" },
+    { "type": "link", "title": "Traefik", "url": "${TRAEFIK_URL}", "icon": "reverse-proxy" },
+    { "type": "link", "title": "TrueNAS", "url": "${TRUENAS_URL}", "icon": "nas" },
+    { "type": "link", "title": "Zabbix", "url": "${ZABBIX_URL}", "icon": "monitoring" },
+    { "type": "link", "title": "WhatsUpDocker", "url": "${WHATSUPDOCKER_URL}", "icon": "info-circle" }
+  ]
+}
