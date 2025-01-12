@@ -7,8 +7,6 @@ services:
       - "${HOMARR_PORT}:7575"
     environment: 
       - LOG_LEVEL=${LOG_LEVEL:-info}
-      - HOSTNAME=${HOMARR_HOSTNAME:-homarr}
-      - DOMAIN=${HOMARR_DOMAIN:-doamaine.com}
     volumes:
       - ./homarr/configs:/app/data/configs
       - ./homarr/icons:/app/public/icons
