@@ -1,19 +1,24 @@
+version: '3.8'
+
 services:
   homarr:
-    image: ghcr.io/ajnart/homarr:latest
     container_name: homarr
-    ports:
-      - "7575:7575" # Port pour accéder au dashboard
-    volumes:
-      - ./data:/app/data # Stockage persistant pour les données et configurations
-      - ./public:/app/public # Dossier public pour personnaliser l'apparence
-    environment:
-      - TZ=${TIMEZONE}
-      - BASE_URL=${BASE_URL}
+    image: ghcr.io/ajnart/homarr:latest
     restart: unless-stopped
+    volumes:
+      - ./configs:/app/data/configs
+      - ./icons:/app/public/icons
+      - ./data:/data
+    environment:
+      - TZ=${TZ}
+      - BASE_URL=${BASE_URL}
+      - DOCKER_HOST=${DOCKER_HOST}
+      - DOCKER_SOCKET=/var/run/docker.sock
+    ports:
+      - "${PORT}:7575"
     networks:
-      - homarr_net
+      - proxy
 
 networks:
-  homarr_net:
-    driver: bridge
+  proxy:
+    external: true
