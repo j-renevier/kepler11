@@ -1,6 +1,6 @@
 services:
   homarr:
-    image: ajnart/homarr:dev
+    image: ghcr.io/ajnart/homarr:latest
     container_name: homarr
     ports:
       - "7575:7575" # Port pour accéder au dashboard
