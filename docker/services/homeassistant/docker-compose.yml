@@ -54,6 +54,18 @@ services:
     networks:
       - home-assistant
 
+  file-editor:
+    container_name: file-editor
+    image: "causticlab/hass-configurator-docker:latest"
+    restart: unless-stopped
+    ports:
+      - ""${FILE_EDITOR_PORT}:3218/tcp"
+    networks:
+      - hass-network
+    volumes:
+      - "./config:/config"
+      - "./file-editor:/hass-config"
+
 
 networks:
   home-assistant:
