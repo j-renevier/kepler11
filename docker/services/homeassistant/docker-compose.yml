@@ -46,7 +46,7 @@ services:
     ports:
       - "${FILE_EDITOR_PORT}:3218/tcp"
     networks:
-      - hass-network
+      - home-assistant
     volumes:
       - "./config:/config"
       - "./file-editor:/hass-config"
