@@ -59,12 +59,12 @@ services:
     image: "causticlab/hass-configurator-docker:latest"
     restart: unless-stopped
     ports:
-      - ""${FILE_EDITOR_PORT}:3218/tcp"
+      - "${FILE_EDITOR_PORT}:3218/tcp"
     networks:
       - hass-network
     volumes:
       - "./config:/config"
-      - "./fileEditor:/hass-config"
+      - "./file-editor:/hass-config"
 
 
 networks:
