@@ -64,7 +64,7 @@ services:
       - hass-network
     volumes:
       - "./config:/config"
-      - "./file-editor:/hass-config"
+      - "./fileEditor:/hass-config"
 
 
 networks:
